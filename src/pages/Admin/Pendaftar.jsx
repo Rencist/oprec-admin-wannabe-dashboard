@@ -26,10 +26,10 @@ export default function Pendaftar() {
   }
 
   let isPendaftar = <OprecAdmin />;
-  if(pasienData.data.is_pendaftar) isPendaftar = <AlreadySubmit />
+  if(pasienData.data.is_pendaftar) isPendaftar = <AlreadySubmit data={pasienData} />
 
   return (
-    <DashboardShellPasien nav={'Check In'}>
+    <DashboardShellPasien nav={'Oprec Admin'}>
       <div className='min-h-screen h-full px-20 py-6 relative'>
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>

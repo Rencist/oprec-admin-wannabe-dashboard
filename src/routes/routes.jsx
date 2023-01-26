@@ -76,7 +76,7 @@ const routes = [
     visible: true,
   },
   {
-    key: 'admin-pendaftar',
+    key: 'oprec-admin',
     path: '/user/oprec-admin',
     element: (
       <AuthRoute>
