@@ -5,7 +5,7 @@ import Loading from '../../components/Loading';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import DashboardShellPasien from '../../layouts/Dashboard';
-import DetailPasien from './DetailPasien';
+import DetailUser from './DetailUser';
 export default function Dashboar() {
   const dispatch = useAuthDispatch();
   const {data: pasienData, error:dashboardError} = useSWR('/auth/me');
@@ -28,7 +28,7 @@ export default function Dashboar() {
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>
         <div className='w-full flex justify-evenly gap-x-5'>
-          <DetailPasien data={pasienData.data}/>
+          <DetailUser data={pasienData.data}/>
         </div>
 
       </div>

@@ -9,14 +9,14 @@ import { useAuthDispatch } from '../contexts/AuthContext';
 const navigation = [
   {
     name: 'Dashboard',
-    href: '/dashboard/pasien',
+    href: '/dashboard/user',
     icon: HiViewGrid,
     current: false,
   },
 
   {
-    name: 'Check In',
-    href: '/pasien/check-in',
+    name: 'Oprec Admin',
+    href: '/user/oprec-admin',
     icon: HiUser,
     current: false,
   },

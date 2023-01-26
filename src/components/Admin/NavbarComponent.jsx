@@ -5,7 +5,7 @@ export function NavbarDetailPendaftar({ data }) {
     <div className='flex justify-between '>
       {/* Path */}
       <div className='flex items-center '>
-        <Link to='/pasien/check-in'>
+        <Link to='/user/check-in'>
           <FaWindowClose className='text-dashboard' size={30} />
         </Link>
         <p className='font-secondary text-base text-gray-600 ml-3 hover:underline'>
@@ -26,7 +26,7 @@ export function NavbarDashboard({data}) {
     <nav className='flex items-center mb-6'>
       <FaRegUserCircle size={25} className='text-dashboard' />
       <p className='ml-2 font-secondary font-base text-sm'>
-        Selamat Datang, <span className='text-[#5189C4] capitalize'>{`Pasien ${data?.fullname}`}</span>
+        Selamat Datang, <span className='text-[#5189C4] capitalize'>{`${data?.fullname}`}</span>
       </p>
     </nav>
   );

@@ -9,17 +9,17 @@ import toast from 'react-hot-toast';
 export default function DashboardAdmin() {
   const dispatch = useAuthDispatch();
   // const adminData = useAuthState();
-  const {data: pasienData ,error:dashboardError} = useSWR('/auth/me');
+  const {data: userData ,error:dashboardError} = useSWR('/auth/me');
 
 
   useEffect(() => {
-    if (pasienData) {
-      dispatch('UPDATE', pasienData.data)
+    if (userData) {
+      dispatch('UPDATE', userData.data)
     }});
   if (dashboardError) {
     toast.error('Maaf terjadi kesalahan');
   } 
-  if (!pasienData){
+  if (!userData){
     return (
       <Loading />
     )
@@ -28,7 +28,7 @@ export default function DashboardAdmin() {
     <DashboardShellAdmin nav={'Dashboard'}>
       <div className='min-h-screen h-full px-20 py-6 relative'>
         {/* Navbar */}
-        <NavbarDashboard data={pasienData.data}/>
+        <NavbarDashboard data={userData.data}/>
         <div className='w-full flex justify-evenly gap-x-5'>
         </div>
 

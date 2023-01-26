@@ -77,7 +77,7 @@ const routes = [
   },
   {
     key: 'admin-pendaftar',
-    path: '/pasien/check-in',
+    path: '/user/oprec-admin',
     element: (
       <AuthRoute>
         <Pendaftar />
@@ -86,8 +86,8 @@ const routes = [
     visible: true,
   },
   {
-    key: 'pasien',
-    path: '/dashboard/pasien',
+    key: 'user',
+    path: '/dashboard/user',
     element: (
       <AuthRoute>
         <Dashboard />

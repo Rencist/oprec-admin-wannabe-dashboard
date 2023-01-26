@@ -5,7 +5,7 @@ import { NavbarDashboard } from '../../components/Admin/NavbarComponent';
 import useSWR from 'swr';
 import toast from 'react-hot-toast';
 import Loading from '../../components/Loading';
-// import CheckIn from '../Auth/CheckIn';
+import OprecAdmin from '../Auth/OprecAdmin';
 
 export default function Pendaftar() {
   const dispatch = useAuthDispatch();
@@ -29,7 +29,7 @@ export default function Pendaftar() {
       <div className='min-h-screen h-full px-20 py-6 relative'>
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>
-        {/* <CheckIn /> */}
+        <OprecAdmin />
       </div>
     </DashboardShellPasien>
   );

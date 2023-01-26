@@ -15,8 +15,8 @@ const navigation = [
   },
 
   {
-    name: 'Check In',
-    href: '/pasien/check-in',
+    name: 'Oprec Admin',
+    href: '/user/oprec-admin',
     icon: HiUser,
     current: false,
   },

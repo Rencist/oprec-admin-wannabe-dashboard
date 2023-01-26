@@ -11,7 +11,7 @@ export default function AuthRoute({ children }) {
         <Loading />
       ) : authenticated && user_type === 'admin' ? (
         <Navigate to='/admin' />
-      ) : authenticated && user_type === 'pasien' ? (
+      ) : authenticated && user_type === 'user' ? (
         children
       ) : (
         <Navigate to='/login' />

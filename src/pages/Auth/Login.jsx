@@ -29,7 +29,7 @@ export default function Login() {
         {
           loading: 'Loading...',
           success: (res) => {
-          history('/dashboard/pasien');
+          history('/dashboard/user');
           return 'Berhasil masuk ke akun anda';
           },
           error: (err) => err.response.data.message,
@@ -48,16 +48,16 @@ export default function Login() {
               </h1>
               <div className='mt-12'></div>
               <Input
-                label='Nomor Telpon'
-                type='no_telp'
-                id='no_telp'
-                placeholder={'Masukan Nomor Telpon'}
+                label='Email'
+                type='email'
+                id='email'
+                placeholder={'Masukan Email'}
                 classNameL={'font-secondary text-xl text-dashboard font-bold'}
                 classNameI={
                   'p-4 outline h-10 outline-3 outline-dashboard mt-2 rounded'
                 }
                 validate={{
-                  required: 'Nomor Telpon tidak boleh kosong',
+                  required: 'Email tidak boleh kosong',
                 }}
               />
               <div className='mt-12'> </div>

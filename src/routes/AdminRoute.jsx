@@ -10,7 +10,7 @@ export default function AdminRoute({ children }) {
         <Loading />
       ) : authenticated && user_type === 'admin' ? (
         children
-      ) : authenticated && user_type === 'pasien' ? (
+      ) : authenticated && user_type === 'user' ? (
         children
       ) : (
         <Navigate to={'/login'} />
