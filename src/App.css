@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Titania */
+
+@font-face {
+  font-family: 'Titania';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/src/assets/font/Titania-Regular.ttf') format('truetype');
+}
