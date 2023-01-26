@@ -6,6 +6,7 @@ import useSWR from 'swr';
 import toast from 'react-hot-toast';
 import Loading from '../../components/Loading';
 import OprecAdmin from '../Auth/OprecAdmin';
+import AlreadySubmit from '../Auth/AlreadySubmit';
 
 export default function Pendaftar() {
   const dispatch = useAuthDispatch();
@@ -24,12 +25,15 @@ export default function Pendaftar() {
     )
   }
 
+  let isPendaftar = <OprecAdmin />;
+  if(pasienData.data.is_pendaftar) isPendaftar = <AlreadySubmit />
+
   return (
     <DashboardShellPasien nav={'Check In'}>
       <div className='min-h-screen h-full px-20 py-6 relative'>
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>
-        <OprecAdmin />
+        {isPendaftar}
       </div>
     </DashboardShellPasien>
   );

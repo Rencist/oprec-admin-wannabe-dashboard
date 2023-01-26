@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { HiViewGrid, HiUser, HiXCircle, HiLogout } from 'react-icons/hi';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import UnstyledLink from '../../components/UnstyledLink';
 import { useAuthDispatch } from '../../contexts/AuthContext';
