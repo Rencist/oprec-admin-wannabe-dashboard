@@ -23,23 +23,41 @@ export default function DetailLab(data) {
   }
   return (
     <>
-      
       <div className='w-full px-4'>
         <ul className='list-inside'>
           <div className='grid grid-cols-12 text-sm md:text-lg'>
-            <li className={'selection:font-secondary text-xl text-dashboard col-span-5'}>Foto</li>
+            <li className={'selection:font-secondary text-xl text-dashboard col-span-5'}>Deskripsi Lab</li>
             <p className={'font-secondary text-xl text-dashboard'}>:</p>
           </div>
         </ul>
       </div>
-      <div className='w-full flex justify-center'>
-      <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
-        {labData.data.map(res => res.name)}
-        {/* {console.log(data.data.id)} */}
+      <div className='w-full px-4'>
+        <ul className='list-inside'>
+          <div className='text-justify text-sm md:text-lg'>
+            <p className={'mt-5 font-secondary text-xl text-dashboard'}>{data.data.desciption}</p>
+          </div>
+        </ul>
       </div>
+      <div className='w-full mt-10 px-4'>
+        <ul className='list-inside'>
+          <div className='grid grid-cols-12 text-sm md:text-lg'>
+            <li className={'selection:font-secondary text-xl text-dashboard col-span-5'}>List Admin Lab</li>
+            <p className={'font-secondary text-xl text-dashboard'}>:</p>
+          </div>
+        </ul>
       </div>
-      <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
-        {data.data.desciption}
+      <div className='w-full px-4 mt-5'>
+        <ul className='list-inside'>
+          <div className='text-justify justify-center text-sm md:text-lg'>
+            <ul className='list-inside'>
+              <div className='grid grid-cols-12 text-sm md:text-lg'>
+              {labData.data.map(res => 
+                <li className={'selection:font-secondary text-xl text-dashboard col-span-6 mt-1'}>{res.name}</li>
+              )}
+              </div>
+            </ul>
+          </div>
+        </ul>
       </div>
     </>
   );

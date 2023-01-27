@@ -5,7 +5,6 @@ import Loading from '../../components/Loading';
 import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 import DashboardShellPasien from '../../layouts/Dashboard';
-import { Link } from 'react-router-dom';
 import DetailLab from './DetailLab';
 
 export default function ListLab() {
@@ -43,16 +42,14 @@ export default function ListLab() {
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>
         <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
-        {labData.data.map((res) => 
-          <Link key={res.id} to={res.name} >
+          {labData.data.map((res) => 
             <div className='p-5 mt-5 justify-center bg-white rounded-lg shadow-lg'>
               <h1 className='font-primary text-dashboard text-2xl text-center mb-6'>
                 {res.name}
               </h1>
+              <DetailLab data={res} />
             </div>
-            <DetailLab data={res} />
-          </Link>
-        )}
+          )}
         </div>
       </div>
     </DashboardShellPasien>
