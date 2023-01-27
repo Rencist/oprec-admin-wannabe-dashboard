@@ -24,26 +24,6 @@ function DetailPendaftar() {
     )
   }
 
-  function renderSwitch(params) {
-    switch(params) {
-      case 1:
-        return 'Software Engineering';
-      case 2:
-        return 'Graphics, Interaction, and Games';
-      case 3:
-        return 'Intelligent Computing and Vision';
-      case 4:
-        return 'Net-Centric Computing';
-      case 5:
-        return 'Computer Architecture And Networking';
-      case 6:
-        return 'Algorithm And Programming';
-      case 7:
-        return 'Information Intelligent Management';
-      default:
-        return 'Modeling and Applied Computation';
-    }
-  }
   return (
     <>
       <div className='p-10 mt-12 w-full grid gap-4 bg-white rounded-lg shadow-lg mb-12'>
@@ -57,7 +37,7 @@ function DetailPendaftar() {
         />
         <DisabledInput
                 label='Lab'
-                placeholder={renderSwitch(pendaftarData.data.list_lab_id)}
+                placeholder={pendaftarData.data.labPendaftar}
                 className={'font-secondary text-xl text-dashboard'}
         />
         <DisabledInput

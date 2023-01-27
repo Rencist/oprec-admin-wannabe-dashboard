@@ -23,9 +23,20 @@ export default function DetailLab(data) {
   }
   return (
     <>
+      
+      <div className='w-full px-4'>
+        <ul className='list-inside'>
+          <div className='grid grid-cols-12 text-sm md:text-lg'>
+            <li className={'selection:font-secondary text-xl text-dashboard col-span-5'}>Foto</li>
+            <p className={'font-secondary text-xl text-dashboard'}>:</p>
+          </div>
+        </ul>
+      </div>
+      <div className='w-full flex justify-center'>
       <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
         {labData.data.map(res => res.name)}
         {/* {console.log(data.data.id)} */}
+      </div>
       </div>
       <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
         {data.data.desciption}
