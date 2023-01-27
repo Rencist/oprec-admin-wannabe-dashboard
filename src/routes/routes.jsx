@@ -12,6 +12,7 @@ import AdminRoute from './AdminRoute';
 import Pendaftar from '../pages/Admin/Pendaftar';
 import DetailPendaftar from '../pages/Admin/DetailPendaftar';
 import Register from '../pages/Auth/Register';
+import ListLab from '../pages/Auth/ListLab';
 
 const routes = [
   {
@@ -81,6 +82,16 @@ const routes = [
     element: (
       <AuthRoute>
         <Pendaftar />
+      </AuthRoute>
+    ),
+    visible: true,
+  },
+  {
+    key: 'list-lab',
+    path: '/user/list-lab',
+    element: (
+      <AuthRoute>
+        <ListLab />
       </AuthRoute>
     ),
     visible: true,

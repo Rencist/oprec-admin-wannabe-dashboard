@@ -85,7 +85,7 @@ export default function Login() {
               />
               <p
                 className='font-secondary text-center text-dashboard mt-4 cursor-pointer hover:underline'
-                onClick={() => history('/register')}
+                onClick={() => history('/register', { lmao:"state" })}
               >
                 Belum punya? Buat akun yuk{' '}
               </p>

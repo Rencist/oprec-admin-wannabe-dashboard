@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { HiViewGrid, HiUser, HiXCircle, HiLogout } from 'react-icons/hi';
+import { HiViewGrid, HiDesktopComputer, HiUser, HiXCircle, HiLogout } from 'react-icons/hi';
 import { Link, useNavigate } from 'react-router-dom';
 
 import UnstyledLink from '../components/UnstyledLink';
@@ -11,6 +11,13 @@ const navigation = [
     name: 'Dashboard',
     href: '/dashboard/user',
     icon: HiViewGrid,
+    current: false,
+  },
+
+  {
+    name: 'List Lab',
+    href: '/user/list-lab',
+    icon: HiDesktopComputer,
     current: false,
   },
 

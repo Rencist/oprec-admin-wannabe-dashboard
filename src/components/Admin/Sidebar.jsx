@@ -15,6 +15,13 @@ const navigation = [
   },
 
   {
+    name: 'List Lab',
+    href: '/user/list-lab',
+    icon: HiUser,
+    current: false,
+  },
+
+  {
     name: 'Oprec Admin',
     href: '/user/oprec-admin',
     icon: HiUser,
