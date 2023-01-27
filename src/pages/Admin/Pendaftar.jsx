@@ -11,12 +11,20 @@ import AlreadySubmit from '../Auth/AlreadySubmit';
 export default function Pendaftar() {
   const dispatch = useAuthDispatch();
   const {data: pasienData, error:dashboardError} = useSWR('/auth/me');
+  const {data: labData, error:labError} = useSWR('/list_lab');
 
   useEffect(() => {
     if (pasienData) {
       dispatch('UPDATE', pasienData.data)
-    }});
+    }
+    if (labData) {
+      dispatch('UPDATE', labData.data)
+    }
+  });
   if (dashboardError) {
+    toast.error('Maaf terjadi kesalahan');
+  } 
+  if (labError) {
     toast.error('Maaf terjadi kesalahan');
   } 
   if (!pasienData){
@@ -24,8 +32,13 @@ export default function Pendaftar() {
       <Loading />
     )
   }
+  if (!labData){
+    return (
+      <Loading />
+    )
+  }
 
-  let isPendaftar = <OprecAdmin />;
+  let isPendaftar = <OprecAdmin data={labData.data}/>;
   if(pasienData.data.is_pendaftar) isPendaftar = <AlreadySubmit data={pasienData} />
 
   return (

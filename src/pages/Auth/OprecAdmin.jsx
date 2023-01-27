@@ -8,8 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import { bearerToken } from '../../lib/helper';
 import useLoadingToast from '../hooks/useLoadingToast';
 import CreateTeamAlert from '../../components/Alert/CreateTeamAlert';
+import SelectInput from '../../components/SelectInput';
 
-export default function OprecAdmin() {
+export default function OprecAdmin(data) {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [formData, setFormData] = useState(null);
 
@@ -47,6 +48,7 @@ export default function OprecAdmin() {
   };
   return (
     <>
+    {/* {data.data.map(res => res.id)} */}
       <CreateTeamAlert
         action={handleCreateTeam}
         data={formData}
@@ -76,17 +78,15 @@ export default function OprecAdmin() {
                 }}
               />
               <div className='mt-6'></div>
-              <Input
-                label='Lab'
-                type='list_lab_id'
+              <SelectInput
                 id='list_lab_id'
-                placeholder={'Masukan Lab'}
-                classNameL={'font-secondary text-xl text-dashboard font-bold'}
-                classNameI={
-                  'p-4 outline h-10 outline-3 outline-dashboard mt-2 rounded'
-                }
+                label='Lab'
+                placeholder='Pilih Lab'
+                classNameL='font-secondary text-xl text-dashboard font-bold'
+                classNameS='p-2 outline h-10 outline-3 outline-dashboard mt-2 rounded'
+                options={data.data}
                 validate={{
-                  required: 'Lab tidak boleh kosong',
+                  required: "Lab tidak boleh kosong",
                 }}
               />
               <div className='mt-6'></div>

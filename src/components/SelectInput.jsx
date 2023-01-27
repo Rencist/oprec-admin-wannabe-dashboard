@@ -14,6 +14,8 @@ export default function SelectInput({
   options = [],
   validation,
   disabled = false,
+  classNameL,
+  classNameS,
 }) {
   const {
     register,
@@ -21,34 +23,25 @@ export default function SelectInput({
   } = useFormContext();
 
   return (
-    <div>
-      <label
-        htmlFor={id}
-        className='block text-sm font-normal text-white font-primary'
-      >
+    <>
+    <div className="flex flex-col font-secondary mt-5">
+      <label className={classNameL}>
         {label}
       </label>
-      <div className='relative mt-1'>
         <select
           {...register(id, validation)}
           name={id}
           id={id}
           disabled={disabled}
-          className={classNames(
-            readOnly || disabled === true ? 'bg-gray-100' : '',
-            errors[id]
-              ? 'focus:ring-red-500 border-red-500 focus:border-red-500'
-              : 'focus:ring-dark-400 focus:border-dark-400',
-            'block w-full border-gray-300 rounded-md shadow-sm  sm:text-sm`',
-          )}
+          className={classNameS}
           aria-describedby={id}
         >
           <option value='' disabled>
             {placeholder}
           </option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.text}
+          {options.map((option, index) => (
+            <option key={index} value={option.id}>
+              {option.name}
             </option>
           ))}
         </select>
@@ -58,15 +51,15 @@ export default function SelectInput({
             <HiExclamationCircle className='text-xl text-red-500' />
           </div>
         )}
-      </div>
       <div className='mt-1'>
         {helperText !== '' && (
-          <p className='text-xs text-gray-500'>{helperText}</p>
+          <p className='font-secondary text-xl text-dashboard font-bold'>{helperText}</p>
         )}
         {errors[id] && (
           <span className='text-sm text-red-500'>{errors[id].message}</span>
         )}
       </div>
     </div>
+    </>
   );
 }
