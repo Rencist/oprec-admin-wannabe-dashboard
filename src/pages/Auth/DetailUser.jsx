@@ -18,7 +18,7 @@ function DetailUser({data}) {
         </h1>
         <DisabledInput
                 label='Nama'
-                placeholder={data.fullname}
+                placeholder={data.name}
                 className={'font-secondary text-xl text-dashboard'}
         />
         <DisabledInput

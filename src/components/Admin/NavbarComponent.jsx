@@ -26,7 +26,7 @@ export function NavbarDashboard({data}) {
     <nav className='flex items-center mb-6'>
       <FaRegUserCircle size={25} className='text-dashboard' />
       <p className='ml-2 font-secondary font-base text-sm'>
-        Selamat Datang, <span className='text-[#5189C4] capitalize'>{`${data?.fullname}`}</span>
+        Selamat Datang, <span className='text-[#5189C4] capitalize'>{`${data?.name}`}</span>
       </p>
     </nav>
   );

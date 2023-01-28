@@ -37,7 +37,7 @@ function DetailPendaftar() {
         />
         <DisabledInput
                 label='Lab'
-                placeholder={pendaftarData.data.labPendaftar}
+                placeholder={pendaftarData.data.list_lab_id}
                 className={'font-secondary text-xl text-dashboard'}
         />
         <DisabledInput

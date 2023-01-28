@@ -34,7 +34,7 @@ export default function DetailLab(data) {
       <div className='w-full px-4'>
         <ul className='list-inside'>
           <div className='text-justify text-sm md:text-lg'>
-            <p className={'mt-5 font-secondary text-xl text-dashboard'}>{data.data.desciption}</p>
+            <p className={'mt-5 font-secondary text-xl text-dashboard'}>{data.data.description}</p>
           </div>
         </ul>
       </div>

@@ -65,7 +65,7 @@ export default function Register() {
               <Input
                 label='Nama'
                 type='name'
-                id='fullname'
+                id='name'
                 placeholder={'Masukan Nama'}
                 classNameL={'font-secondary text-xl text-dashboard font-bold'}
                 classNameI={
