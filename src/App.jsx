@@ -8,7 +8,7 @@ import Routes from './routes';
 import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
-  axios.defaults.baseURL = 'http://localhost:8000/api';
+  axios.defaults.baseURL = 'https://dafian.robby.pw/api';
   axios.interceptors.response.use(undefined, async function (err) {
     // const originalRequest = err.config;
 
