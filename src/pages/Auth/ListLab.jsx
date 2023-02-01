@@ -41,7 +41,7 @@ export default function ListLab() {
       <div className='min-h-screen h-full px-20 py-6 relative'>
         {/* Navbar */}
         <NavbarDashboard data={pasienData.data}/>
-        <div className='justify-evenly grid grid-rows-4 grid-flow-col gap-4'>
+        <div className='justify-evenly sm:grid grid-rows-4 grid-flow-col gap-4'>
           {labData.data.map((res) => 
             <div className='p-5 mt-5 justify-center bg-white rounded-lg shadow-lg'>
               <h1 className='font-primary text-dashboard text-2xl text-center mb-6'>
