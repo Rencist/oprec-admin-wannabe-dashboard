@@ -57,11 +57,11 @@ export default function OprecAdmin(data) {
         setOpen={setIsAlertOpen}
       />
       <div className='min-h-screen w-full flex justify-center items-center gap-x-5'>
-        <div className=' w-full md:w-1/2 p-20'>
+        <div className=' w-full md:w-1/2 sm:p-5 md:p-10'>
           <FormProvider {...methods}>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <h1 className='font-primary text-dashboard md:text-6xl text-5xl text-center'>
-                Selamat Datang
+              <h1 className='font-primary text-dashboard md:text-3xl text-2xl text-center'>
+                Form Pendaftaran Oprec Calon Admin 2023
               </h1>
               <div className='mt-12'></div>
               <Input

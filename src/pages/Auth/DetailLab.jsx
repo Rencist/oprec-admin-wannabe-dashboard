@@ -50,7 +50,7 @@ export default function DetailLab(data) {
         <ul className='list-inside'>
           <div className='text-justify justify-center text-sm md:text-lg'>
             <ul className='list-inside'>
-              <div className='grid grid-cols-12 text-sm md:text-lg'>
+              <div className='md:grid grid-cols-12 text-sm md:text-lg'>
               {labData.data.map(res => 
                 <li className={'selection:font-secondary text-xl text-dashboard col-span-6 mt-1'}>{res.name}</li>
               )}
