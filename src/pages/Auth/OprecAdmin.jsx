@@ -7,7 +7,7 @@ import SubmitButton from '../../components/SubmitButton';
 import { useNavigate } from 'react-router-dom';
 import { bearerToken } from '../../lib/helper';
 import useLoadingToast from '../hooks/useLoadingToast';
-import CreateTeamAlert from '../../components/Alert/CreateTeamAlert';
+import RegisterAlert from '../../components/Alert/RegisterAlert';
 import SelectInput from '../../components/SelectInput';
 
 export default function OprecAdmin(data) {
@@ -49,7 +49,7 @@ export default function OprecAdmin(data) {
   return (
     <>
     {/* {data.data.map(res => res.id)} */}
-      <CreateTeamAlert
+      <RegisterAlert
         action={handleCreateTeam}
         data={formData}
         isLoading={isLoading}

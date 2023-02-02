@@ -7,7 +7,7 @@ import SubmitButton from '../../components/SubmitButton';
 import { useNavigate } from 'react-router-dom';
 import InputPassword from '../../components/InputPassword';
 import useLoadingToast from '../hooks/useLoadingToast';
-import CreateTeamAlert from '../../components/Alert/CreateTeamAlert';
+import RegisterAlert from '../../components/Alert/RegisterAlert';
 
 export default function Register() {
   const [isAlertOpen, setIsAlertOpen] = useState(false);
@@ -47,7 +47,7 @@ export default function Register() {
   };
   return (
     <>
-      <CreateTeamAlert
+      <RegisterAlert
         action={handleCreateTeam}
         data={formData}
         isLoading={isLoading}

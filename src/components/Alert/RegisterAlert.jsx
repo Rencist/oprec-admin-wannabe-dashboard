@@ -4,7 +4,7 @@ import { HiOutlineExclamation, HiOutlineX } from 'react-icons/hi';
 
 import { classNames } from '../../lib/helper';
 
-export default function CreateTeamAlert({
+export default function RegisterAlert({
   action,
   data,
   isLoading,
@@ -61,9 +61,9 @@ export default function CreateTeamAlert({
                 </button>
               </div>
               <div className='sm:flex sm:items-start'>
-                <div className='flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-yellow-100 rounded-full sm:mx-0 sm:h-10 sm:w-10'>
+                <div className='flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-dashboard rounded-full sm:mx-0 sm:h-10 sm:w-10'>
                   <HiOutlineExclamation
-                    className='w-6 h-6 text-yellow-600'
+                    className='w-6 h-6 text-white'
                     aria-hidden='true'
                   />
                 </div>
@@ -72,13 +72,12 @@ export default function CreateTeamAlert({
                     as='h3'
                     className='text-lg font-medium leading-6 text-gray-900'
                   >
-                    Pembuatan Tim
+                    Pembuatan Akun
                   </Dialog.Title>
                   <div className='mt-2'>
                     <p className='text-sm text-gray-500'>
                       Apakah anda yakin bahwa data yang telah dimasukkan sudah
-                      benar dan sesuai? Kesalahan data akan memperlambat proses
-                      verifikasi panitia
+                      benar dan sesuai?
                     </p>
                   </div>
                 </div>
@@ -88,12 +87,12 @@ export default function CreateTeamAlert({
                   type='button'
                   disabled={isLoading}
                   className={classNames(
-                    'inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-yellow-600 border border-transparent rounded-md shadow-sm hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:ml-3 sm:w-auto sm:text-sm',
+                    'inline-flex justify-center w-full px-4 py-2 text-base font-medium text-white bg-dashboard border border-transparent rounded-md shadow-sm hover:bg-dashboard focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dashboard sm:ml-3 sm:w-auto sm:text-sm',
                     isLoading && 'filter brightness-90 cursor-wait',
                   )}
                   onClick={() => action(data)}
                 >
-                  Yakin
+                  Submit
                 </button>
                 <button
                   type='button'
